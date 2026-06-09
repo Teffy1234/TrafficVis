@@ -1,0 +1,5 @@
+{
+  "name": "TrafficVis",
+  "description": "Sistema de procesamiento y vizualizacion basada en Big data y monitoreo de trafico en redes de computadoras",
+  "requestFramePermissions": []
+}
