@@ -165,3 +165,64 @@ export const getPc3SmtpMetricas = getPc1SmtpMetricas;
 export const getPc3TcpMetricas = getPc1TcpMetricas;
 export const getPc3UdpMetricas = getPc1UdpMetricas;
 export const getPc3VoipMetricas = getPc1VoipMetricas;
+
+// ============================================================
+// FUNCIONES PARA pcsService.ts
+// ============================================================
+
+export const getPc1General = async () => {
+    const data = await getResultadosCompletos();
+    return {
+        pc: "PC1",
+        distribucion: data.distribucion_protocolos || [],
+        variacion_por_hora: data.variacion_por_hora || [],
+        variacion_por_dia: data.variacion_por_dia || [],
+        icmp: data.icmp || {},
+        dns: data.dns || {},
+        ftp: data.ftp || {},
+        smtp: data.smtp || {},
+        udp: data.udp || {},
+        tcp: data.tcp || {},
+        http: data.http || {},
+        https: data.https || {},
+        voip: data.voip || {}
+    };
+};
+
+export const getPc2General = async () => {
+    const data = await getResultadosCompletos();
+    return {
+        pc: "PC2",
+        distribucion: data.distribucion_protocolos || [],
+        variacion_por_hora: data.variacion_por_hora || [],
+        variacion_por_dia: data.variacion_por_dia || [],
+        icmp: data.icmp || {},
+        dns: data.dns || {},
+        ftp: data.ftp || {},
+        smtp: data.smtp || {},
+        udp: data.udp || {},
+        tcp: data.tcp || {},
+        http: data.http || {},
+        https: data.https || {},
+        voip: data.voip || {}
+    };
+};
+
+export const getPc3General = async () => {
+    const data = await getResultadosCompletos();
+    return {
+        pc: "PC3",
+        distribucion: data.distribucion_protocolos || [],
+        variacion_por_hora: data.variacion_por_hora || [],
+        variacion_por_dia: data.variacion_por_dia || [],
+        icmp: data.icmp || {},
+        dns: data.dns || {},
+        ftp: data.ftp || {},
+        smtp: data.smtp || {},
+        udp: data.udp || {},
+        tcp: data.tcp || {},
+        http: data.http || {},
+        https: data.https || {},
+        voip: data.voip || {}
+    };
+};
