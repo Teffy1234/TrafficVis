@@ -1,1 +1,1733 @@
-
+{
+  "distribucion_protocolos": [
+    {
+      "protocolo": "UDP",
+      "cantidad": 2411868,
+      "porcentaje": 83.23502412291298
+    },
+    {
+      "protocolo": "ICMP",
+      "cantidad": 214238,
+      "porcentaje": 7.393483017331226
+    },
+    {
+      "protocolo": "TCP",
+      "cantidad": 162818,
+      "porcentaje": 5.618947702629018
+    },
+    {
+      "protocolo": "DNS",
+      "cantidad": 50122,
+      "porcentaje": 1.7297405492707907
+    },
+    {
+      "protocolo": "FTP",
+      "cantidad": 27309,
+      "porcentaje": 0.9424501149203149
+    },
+    {
+      "protocolo": "SMTP",
+      "cantidad": 11097,
+      "porcentaje": 0.38296418489401796
+    },
+    {
+      "protocolo": "HTTP",
+      "cantidad": 10398,
+      "porcentaje": 0.3588412719228619
+    },
+    {
+      "protocolo": "HTTPS",
+      "cantidad": 9810,
+      "porcentaje": 0.33854903611879933
+    }
+  ],
+  "variacion_por_hora": [
+    {
+      "hora": 11,
+      "protocolo": "DNS",
+      "cantidad": 8117
+    },
+    {
+      "hora": 11,
+      "protocolo": "FTP",
+      "cantidad": 4528
+    },
+    {
+      "hora": 11,
+      "protocolo": "HTTP",
+      "cantidad": 1713
+    },
+    {
+      "hora": 11,
+      "protocolo": "HTTPS",
+      "cantidad": 1604
+    },
+    {
+      "hora": 11,
+      "protocolo": "ICMP",
+      "cantidad": 34094
+    },
+    {
+      "hora": 11,
+      "protocolo": "SMTP",
+      "cantidad": 1872
+    },
+    {
+      "hora": 11,
+      "protocolo": "TCP",
+      "cantidad": 20533
+    },
+    {
+      "hora": 11,
+      "protocolo": "UDP",
+      "cantidad": 405473
+    },
+    {
+      "hora": 12,
+      "protocolo": "DNS",
+      "cantidad": 5356
+    },
+    {
+      "hora": 12,
+      "protocolo": "FTP",
+      "cantidad": 5383
+    },
+    {
+      "hora": 12,
+      "protocolo": "HTTP",
+      "cantidad": 2158
+    },
+    {
+      "hora": 12,
+      "protocolo": "HTTPS",
+      "cantidad": 2582
+    },
+    {
+      "hora": 12,
+      "protocolo": "ICMP",
+      "cantidad": 42664
+    },
+    {
+      "hora": 12,
+      "protocolo": "SMTP",
+      "cantidad": 2184
+    },
+    {
+      "hora": 12,
+      "protocolo": "TCP",
+      "cantidad": 35484
+    },
+    {
+      "hora": 12,
+      "protocolo": "UDP",
+      "cantidad": 428963
+    },
+    {
+      "hora": 13,
+      "protocolo": "DNS",
+      "cantidad": 11348
+    },
+    {
+      "hora": 13,
+      "protocolo": "FTP",
+      "cantidad": 8175
+    },
+    {
+      "hora": 13,
+      "protocolo": "HTTP",
+      "cantidad": 3371
+    },
+    {
+      "hora": 13,
+      "protocolo": "HTTPS",
+      "cantidad": 3066
+    },
+    {
+      "hora": 13,
+      "protocolo": "ICMP",
+      "cantidad": 62336
+    },
+    {
+      "hora": 13,
+      "protocolo": "SMTP",
+      "cantidad": 3389
+    },
+    {
+      "hora": 13,
+      "protocolo": "TCP",
+      "cantidad": 52045
+    },
+    {
+      "hora": 13,
+      "protocolo": "UDP",
+      "cantidad": 658706
+    },
+    {
+      "hora": 15,
+      "protocolo": "DNS",
+      "cantidad": 3030
+    },
+    {
+      "hora": 15,
+      "protocolo": "FTP",
+      "cantidad": 782
+    },
+    {
+      "hora": 15,
+      "protocolo": "HTTP",
+      "cantidad": 317
+    },
+    {
+      "hora": 15,
+      "protocolo": "HTTPS",
+      "cantidad": 37
+    },
+    {
+      "hora": 15,
+      "protocolo": "ICMP",
+      "cantidad": 8121
+    },
+    {
+      "hora": 15,
+      "protocolo": "SMTP",
+      "cantidad": 177
+    },
+    {
+      "hora": 15,
+      "protocolo": "TCP",
+      "cantidad": 7486
+    },
+    {
+      "hora": 15,
+      "protocolo": "UDP",
+      "cantidad": 207667
+    },
+    {
+      "hora": 16,
+      "protocolo": "DNS",
+      "cantidad": 9510
+    },
+    {
+      "hora": 16,
+      "protocolo": "FTP",
+      "cantidad": 3444
+    },
+    {
+      "hora": 16,
+      "protocolo": "HTTP",
+      "cantidad": 1374
+    },
+    {
+      "hora": 16,
+      "protocolo": "HTTPS",
+      "cantidad": 1281
+    },
+    {
+      "hora": 16,
+      "protocolo": "ICMP",
+      "cantidad": 28774
+    },
+    {
+      "hora": 16,
+      "protocolo": "SMTP",
+      "cantidad": 1427
+    },
+    {
+      "hora": 16,
+      "protocolo": "TCP",
+      "cantidad": 17742
+    },
+    {
+      "hora": 16,
+      "protocolo": "UDP",
+      "cantidad": 274612
+    },
+    {
+      "hora": 17,
+      "protocolo": "DNS",
+      "cantidad": 5965
+    },
+    {
+      "hora": 17,
+      "protocolo": "FTP",
+      "cantidad": 1987
+    },
+    {
+      "hora": 17,
+      "protocolo": "HTTP",
+      "cantidad": 635
+    },
+    {
+      "hora": 17,
+      "protocolo": "HTTPS",
+      "cantidad": 574
+    },
+    {
+      "hora": 17,
+      "protocolo": "ICMP",
+      "cantidad": 15175
+    },
+    {
+      "hora": 17,
+      "protocolo": "SMTP",
+      "cantidad": 814
+    },
+    {
+      "hora": 17,
+      "protocolo": "TCP",
+      "cantidad": 11172
+    },
+    {
+      "hora": 17,
+      "protocolo": "UDP",
+      "cantidad": 170450
+    },
+    {
+      "hora": 18,
+      "protocolo": "DNS",
+      "cantidad": 6796
+    },
+    {
+      "hora": 18,
+      "protocolo": "FTP",
+      "cantidad": 3010
+    },
+    {
+      "hora": 18,
+      "protocolo": "HTTP",
+      "cantidad": 830
+    },
+    {
+      "hora": 18,
+      "protocolo": "HTTPS",
+      "cantidad": 666
+    },
+    {
+      "hora": 18,
+      "protocolo": "ICMP",
+      "cantidad": 23074
+    },
+    {
+      "hora": 18,
+      "protocolo": "SMTP",
+      "cantidad": 1234
+    },
+    {
+      "hora": 18,
+      "protocolo": "TCP",
+      "cantidad": 18356
+    },
+    {
+      "hora": 18,
+      "protocolo": "UDP",
+      "cantidad": 265997
+    }
+  ],
+  "variacion_por_dia": [
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "DNS",
+      "cantidad": 3030
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "FTP",
+      "cantidad": 782
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "HTTP",
+      "cantidad": 317
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "HTTPS",
+      "cantidad": 37
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "ICMP",
+      "cantidad": 8121
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "SMTP",
+      "cantidad": 177
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "TCP",
+      "cantidad": 7486
+    },
+    {
+      "fecha": "2025-11-27",
+      "protocolo": "UDP",
+      "cantidad": 207667
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "DNS",
+      "cantidad": 8831
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "FTP",
+      "cantidad": 8984
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "HTTP",
+      "cantidad": 3917
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "HTTPS",
+      "cantidad": 4061
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "ICMP",
+      "cantidad": 71380
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "SMTP",
+      "cantidad": 3753
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "TCP",
+      "cantidad": 60116
+    },
+    {
+      "fecha": "2025-11-28",
+      "protocolo": "UDP",
+      "cantidad": 675633
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "DNS",
+      "cantidad": 10757
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "FTP",
+      "cantidad": 4121
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "HTTP",
+      "cantidad": 1645
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "HTTPS",
+      "cantidad": 1551
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "ICMP",
+      "cantidad": 34039
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "SMTP",
+      "cantidad": 1733
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "TCP",
+      "cantidad": 21977
+    },
+    {
+      "fecha": "2025-11-29",
+      "protocolo": "UDP",
+      "cantidad": 323376
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "DNS",
+      "cantidad": 11514
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "FTP",
+      "cantidad": 4320
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "HTTP",
+      "cantidad": 1194
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "HTTPS",
+      "cantidad": 970
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "ICMP",
+      "cantidad": 32984
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "SMTP",
+      "cantidad": 1742
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "TCP",
+      "cantidad": 25293
+    },
+    {
+      "fecha": "2025-12-01",
+      "protocolo": "UDP",
+      "cantidad": 387683
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "DNS",
+      "cantidad": 8117
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "FTP",
+      "cantidad": 4528
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "HTTP",
+      "cantidad": 1713
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "HTTPS",
+      "cantidad": 1604
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "ICMP",
+      "cantidad": 34094
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "SMTP",
+      "cantidad": 1872
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "TCP",
+      "cantidad": 20533
+    },
+    {
+      "fecha": "2025-12-04",
+      "protocolo": "UDP",
+      "cantidad": 405473
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "DNS",
+      "cantidad": 7873
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "FTP",
+      "cantidad": 4574
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "HTTP",
+      "cantidad": 1612
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "HTTPS",
+      "cantidad": 1587
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "ICMP",
+      "cantidad": 33620
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "SMTP",
+      "cantidad": 1820
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "TCP",
+      "cantidad": 27413
+    },
+    {
+      "fecha": "2025-12-11",
+      "protocolo": "UDP",
+      "cantidad": 412036
+    }
+  ],
+  "icmp": {
+    "disponible": true,
+    "total_pings": 13525,
+    "rtt_promedio_ms": 744445257.49,
+    "rtt_min_ms": 0.11,
+    "rtt_max_ms": 1127235583.09,
+    "rtt_p95_ms": 1125220829.8
+  },
+  "dns": {
+    "disponible": true,
+    "total_paquetes": 50122,
+    "consultas": 38136,
+    "respuestas": 0
+  },
+  "ftp": {
+    "disponible": true,
+    "total_paquetes": 27309,
+    "total_bytes": 2021286,
+    "comandos": {},
+    "respuestas": {
+      "220.0": 1826,
+      "331.0": 1820,
+      "530.0": 1819,
+      "221.0": 9,
+      "502.0": 6,
+      "504.0": 6
+    }
+  },
+  "smtp": {
+    "disponible": true,
+    "total_paquetes": 11097,
+    "total_bytes": 835861,
+    "comandos": {},
+    "respuestas": {
+      "220.0": 902,
+      "250.0": 902,
+      "221.0": 898
+    }
+  },
+  "udp": {
+    "disponible": true,
+    "total_paquetes": 2411868,
+    "total_bytes": 634161582,
+    "tamanio_promedio": 262.93,
+    "top_puertos_destino": {
+      "8500.0": 1467915,
+      "4000.0": 241194,
+      "8800.0": 120993,
+      "16470.0": 120531,
+      "4002.0": 80755,
+      "16396.0": 60546,
+      "16414.0": 60002,
+      "53.0": 59130,
+      "16478.0": 56026,
+      "4006.0": 55922
+    },
+    "top_ips_origen": {
+      "192.168.1.60": 1155138,
+      "192.168.3.200": 858096,
+      "192.168.1.100": 377871,
+      "192.168.1.1,192.168.1.60": 7886,
+      "192.168.3.1,192.168.3.200": 5626,
+      "192.168.1.60,192.168.3.200": 3214,
+      "192.168.1.1": 403,
+      "192.168.2.1": 385,
+      "192.168.2.50": 349,
+      "192.168.3.6": 129
+    }
+  },
+  "tcp": {
+    "disponible": true,
+    "total_paquetes": 162818,
+    "total_bytes": 15998081,
+    "tamanio_promedio": 98.26,
+    "top_puertos_destino": {
+      "53.0": 102794,
+      "21.0": 11691,
+      "443.0": 5791,
+      "25.0": 5598,
+      "80.0": 5530,
+      "445.0": 267,
+      "52067.0": 109,
+      "39334.0": 103,
+      "110.0": 80,
+      "143.0": 79
+    },
+    "top_ips_origen": {
+      "192.168.3.200": 115198,
+      "192.168.2.50": 16916,
+      "192.168.3.1,192.168.3.200": 9589,
+      "192.168.3.5": 9299,
+      "192.168.1.60": 5755,
+      "192.168.1.5": 3237,
+      "192.168.2.3": 1941,
+      "192.168.1.100": 291,
+      "192.168.1.1,192.168.1.60": 137,
+      "192.168.1.6": 102
+    }
+  },
+  "http": {
+    "disponible": true,
+    "total_paquetes": 10398,
+    "metodos": {
+      "GET": 1029
+    },
+    "codigos_respuesta": {
+      "200.0": 679,
+      "302.0": 294,
+      "401.0": 56
+    }
+  },
+  "https": {
+    "disponible": true,
+    "total_paquetes": 9810
+  },
+  "por_dia_protocolo_pc": [
+    {
+      "fecha": "2025-11-27",
+      "total_dia": 227617,
+      "porcentaje_global_dia": 7.86,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 3030,
+          "porcentaje_en_dia": 1.33,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 739
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 2291
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 782,
+          "porcentaje_en_dia": 0.34,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 386
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 396
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 317,
+          "porcentaje_en_dia": 0.14,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 153
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 164
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 37,
+          "porcentaje_en_dia": 0.02,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 2
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 35
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 8121,
+          "porcentaje_en_dia": 3.57,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 2717
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 5404
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 177,
+          "porcentaje_en_dia": 0.08,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 157
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 20
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 7486,
+          "porcentaje_en_dia": 3.29,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 722
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 6764
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 207667,
+          "porcentaje_en_dia": 91.24,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 73175
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 134492
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fecha": "2025-11-28",
+      "total_dia": 836675,
+      "porcentaje_global_dia": 28.87,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 8831,
+          "porcentaje_en_dia": 1.06,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 8827
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 4
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 8984,
+          "porcentaje_en_dia": 1.07,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1875
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 3528
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 3581
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 3917,
+          "porcentaje_en_dia": 0.47,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 887
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1036
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1994
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 4061,
+          "porcentaje_en_dia": 0.49,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 20
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1509
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 2532
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 71380,
+          "porcentaje_en_dia": 8.53,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 17099
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 24545
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 29736
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 3753,
+          "porcentaje_en_dia": 0.45,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 765
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1476
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1512
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 60116,
+          "porcentaje_en_dia": 7.19,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 3766
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 7995
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 48355
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 675633,
+          "porcentaje_en_dia": 80.75,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 220901
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 899
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 453833
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fecha": "2025-11-29",
+      "total_dia": 399199,
+      "porcentaje_global_dia": 13.78,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 10757,
+          "porcentaje_en_dia": 2.69,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 4010
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 2
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 6745
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 4121,
+          "porcentaje_en_dia": 1.03,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 866
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1588
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1667
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 1645,
+          "porcentaje_en_dia": 0.41,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 364
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 472
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 809
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 1551,
+          "porcentaje_en_dia": 0.39,
+          "pcs": [
+            {
+              "pc": "PC2",
+              "cantidad": 685
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 866
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 34039,
+          "porcentaje_en_dia": 8.53,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 9013
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 10470
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 14556
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 1733,
+          "porcentaje_en_dia": 0.43,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 337
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 672
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 724
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 21977,
+          "porcentaje_en_dia": 5.51,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1598
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 3547
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 16832
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 323376,
+          "porcentaje_en_dia": 81.01,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 104346
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 229
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 218801
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fecha": "2025-12-01",
+      "total_dia": 465700,
+      "porcentaje_global_dia": 16.07,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 11514,
+          "porcentaje_en_dia": 2.47,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 5119
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 6395
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 4320,
+          "porcentaje_en_dia": 0.93,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 931
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1777
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1612
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 1194,
+          "porcentaje_en_dia": 0.26,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 388
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 266
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 540
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 970,
+          "porcentaje_en_dia": 0.21,
+          "pcs": [
+            {
+              "pc": "PC2",
+              "cantidad": 295
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 675
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 32984,
+          "porcentaje_en_dia": 7.08,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 8325
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 11914
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 12745
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 1742,
+          "porcentaje_en_dia": 0.37,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 360
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 722
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 660
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 25293,
+          "porcentaje_en_dia": 5.43,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1699
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 3060
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 20534
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 387683,
+          "porcentaje_en_dia": 83.25,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 155534
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 316
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 231833
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fecha": "2025-12-04",
+      "total_dia": 477934,
+      "porcentaje_global_dia": 16.49,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 8117,
+          "porcentaje_en_dia": 1.7,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 3717
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 4400
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 4528,
+          "porcentaje_en_dia": 0.95,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 953
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1783
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1792
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 1713,
+          "porcentaje_en_dia": 0.36,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 353
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 516
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 844
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 1604,
+          "porcentaje_en_dia": 0.34,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 6
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 775
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 823
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 34094,
+          "porcentaje_en_dia": 7.13,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 8373
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 11726
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 13995
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 1872,
+          "porcentaje_en_dia": 0.39,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 372
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 745
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 755
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 20533,
+          "porcentaje_en_dia": 4.3,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1937
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 3831
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 14765
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 405473,
+          "porcentaje_en_dia": 84.84,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 142808
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 265
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 262400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fecha": "2025-12-11",
+      "total_dia": 490535,
+      "porcentaje_global_dia": 16.93,
+      "protocolos": [
+        {
+          "protocolo": "DNS",
+          "total_protocolo_dia": 7873,
+          "porcentaje_en_dia": 1.6,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 3944
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 3929
+            }
+          ]
+        },
+        {
+          "protocolo": "FTP",
+          "total_protocolo_dia": 4574,
+          "porcentaje_en_dia": 0.93,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1000
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 1776
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 1798
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTP",
+          "total_protocolo_dia": 1612,
+          "porcentaje_en_dia": 0.33,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 319
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 474
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 819
+            }
+          ]
+        },
+        {
+          "protocolo": "HTTPS",
+          "total_protocolo_dia": 1587,
+          "porcentaje_en_dia": 0.32,
+          "pcs": [
+            {
+              "pc": "PC2",
+              "cantidad": 712
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 875
+            }
+          ]
+        },
+        {
+          "protocolo": "ICMP",
+          "total_protocolo_dia": 33620,
+          "porcentaje_en_dia": 6.85,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 8067
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 11430
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 14123
+            }
+          ]
+        },
+        {
+          "protocolo": "SMTP",
+          "total_protocolo_dia": 1820,
+          "porcentaje_en_dia": 0.37,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 384
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 708
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 728
+            }
+          ]
+        },
+        {
+          "protocolo": "TCP",
+          "total_protocolo_dia": 27413,
+          "porcentaje_en_dia": 5.59,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 1724
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 3670
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 22019
+            }
+          ]
+        },
+        {
+          "protocolo": "UDP",
+          "total_protocolo_dia": 412036,
+          "porcentaje_en_dia": 84.0,
+          "pcs": [
+            {
+              "pc": "PC1",
+              "cantidad": 150244
+            },
+            {
+              "pc": "PC2",
+              "cantidad": 239
+            },
+            {
+              "pc": "PC3",
+              "cantidad": 261553
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "protocolos_anidado": [
+    {
+      "protocolo": "DNS",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 26356
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 6
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 23760
+        }
+      ],
+      "total": 50122,
+      "porcentaje_global": 1.73
+    },
+    {
+      "protocolo": "FTP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 6011
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 10452
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 10846
+        }
+      ],
+      "total": 27309,
+      "porcentaje_global": 0.94
+    },
+    {
+      "protocolo": "HTTP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 2464
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 2764
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 5170
+        }
+      ],
+      "total": 10398,
+      "porcentaje_global": 0.36
+    },
+    {
+      "protocolo": "HTTPS",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 28
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 3976
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 5806
+        }
+      ],
+      "total": 9810,
+      "porcentaje_global": 0.34
+    },
+    {
+      "protocolo": "ICMP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 53594
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 70085
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 90559
+        }
+      ],
+      "total": 214238,
+      "porcentaje_global": 7.39
+    },
+    {
+      "protocolo": "SMTP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 2375
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 4323
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 4399
+        }
+      ],
+      "total": 11097,
+      "porcentaje_global": 0.38
+    },
+    {
+      "protocolo": "TCP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 11446
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 22103
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 129269
+        }
+      ],
+      "total": 162818,
+      "porcentaje_global": 5.62
+    },
+    {
+      "protocolo": "UDP",
+      "pcs": [
+        {
+          "pc": "PC1",
+          "cantidad": 847008
+        },
+        {
+          "pc": "PC2",
+          "cantidad": 1948
+        },
+        {
+          "pc": "PC3",
+          "cantidad": 1562912
+        }
+      ],
+      "total": 2411868,
+      "porcentaje_global": 83.24
+    }
+  ]
+}
