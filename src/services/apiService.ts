@@ -166,10 +166,6 @@ export const getPc3TcpMetricas = getPc1TcpMetricas;
 export const getPc3UdpMetricas = getPc1UdpMetricas;
 export const getPc3VoipMetricas = getPc1VoipMetricas;
 
-// ============================================================
-// FUNCIONES PARA pcsService.ts
-// ============================================================
-
 export const getPc1General = async () => {
     const data = await getResultadosCompletos();
     return {
@@ -224,5 +220,17 @@ export const getPc3General = async () => {
         http: data.http || {},
         https: data.https || {},
         voip: data.voip || {}
+    };
+};
+
+// ============================================================
+// FUNCIONES PARA archivosService.ts
+// ============================================================
+
+export const getArchivoDetalle = async (nombreArchivo: string) => {
+    const data = await getResultadosCompletos();
+    return {
+        nombre: nombreArchivo,
+        datos: data
     };
 };
