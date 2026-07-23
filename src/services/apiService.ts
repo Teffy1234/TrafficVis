@@ -1,8 +1,3 @@
-// ============================================================
-// apiService.ts - LEE JSON LOCAL (resultados_completos.json)
-// ============================================================
-
-// Función para leer archivos JSON locales
 const fetchLocalJson = async (filename: string) => {
     const response = await fetch(`/resultados/${filename}`);
     if (!response.ok) {
@@ -11,12 +6,10 @@ const fetchLocalJson = async (filename: string) => {
     return response.json();
 };
 
-// Obtiene TODOS los datos del archivo completo
 export const getResultadosCompletos = async () => {
     return fetchLocalJson('resultados_completos.json');
 };
 
-// Funciones que extraen partes específicas del archivo completo
 export const getDistribucionProtocolos = async () => {
     const data = await getResultadosCompletos();
     return data.distribucion_protocolos;
@@ -72,16 +65,12 @@ export const getHTTPS = async () => {
     return data.https;
 };
 
-// Lista de archivos disponibles
 export const getArchivos = async () => {
     return {
-        files: [
-            'resultados_completos.json'
-        ]
+        files: ['resultados_completos.json']
     };
 };
 
-// Mantén compatibilidad con funciones existentes
 export const getGeneralProtocolos = getDistribucionProtocolos;
 export const getLecturasGeneral = getVariacionHora;
 export const getLecturasHoras = getVariacionDia;
