@@ -223,14 +223,26 @@ export const getPc3General = async () => {
     };
 };
 
-// ============================================================
-// FUNCIONES PARA archivosService.ts
-// ============================================================
-
 export const getArchivoDetalle = async (nombreArchivo: string) => {
     const data = await getResultadosCompletos();
     return {
         nombre: nombreArchivo,
         datos: data
+    };
+};
+
+// ============================================================
+// FUNCIONES PARA metricasService.ts
+// ============================================================
+
+export const getProtocoloMetrica = async (protocolo: string, metrica: string) => {
+    const data = await getResultadosCompletos();
+    const protocoloData = data.distribucion_protocolos?.find(
+        (p: any) => p.protocolo === protocolo
+    );
+    return {
+        protocolo,
+        metrica,
+        valor: protocoloData || { protocolo, cantidad: 0, porcentaje: 0 }
     };
 };
