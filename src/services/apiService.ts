@@ -65,6 +65,11 @@ export const getHTTPS = async () => {
     return data.https;
 };
 
+export const getVOIP = async () => {
+    const data = await getResultadosCompletos();
+    return data.voip || {};
+};
+
 export const getArchivos = async () => {
     return {
         files: ['resultados_completos.json']
@@ -87,8 +92,21 @@ export const getPCData = async (pcId: string) => {
     const data = await getResultadosCompletos();
     return data.protocolos_anidado || [];
 };
+
 // ============================================================
-// FUNCIONES PARA PROTOCOLOS POR PC
+// FUNCIONES PARA PROTOCOLOS (getProtocoloDetalle)
+// ============================================================
+
+export const getProtocoloDetalle = async (protocolo: string) => {
+    const data = await getResultadosCompletos();
+    const encontrado = data.distribucion_protocolos?.find(
+        (p: any) => p.protocolo === protocolo
+    );
+    return encontrado || { protocolo, cantidad: 0, porcentaje: 0 };
+};
+
+// ============================================================
+// FUNCIONES PARA METRICAS POR PC (PARA protocolosService.ts)
 // ============================================================
 
 export const getPc1DnsMetricas = async () => {
@@ -135,10 +153,6 @@ export const getPc1VoipMetricas = async () => {
     const data = await getResultadosCompletos();
     return data.voip || {};
 };
-
-// ============================================================
-// FUNCIONES PARA PC2 Y PC3 (SI LAS NECESITAS)
-// ============================================================
 
 export const getPc2DnsMetricas = getPc1DnsMetricas;
 export const getPc2FtpMetricas = getPc1FtpMetricas;
