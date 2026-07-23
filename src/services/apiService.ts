@@ -85,12 +85,15 @@ export const getArchivos = async () => {
 export const getGeneralProtocolos = getDistribucionProtocolos;
 export const getLecturasGeneral = getVariacionHora;
 export const getLecturasHoras = getVariacionDia;
+
 export const getLecturasPC1 = async () => {
     const data = await getResultadosCompletos();
     return data.por_dia_protocolo_pc || [];
 };
+
 export const getLecturasPC2 = getLecturasPC1;
 export const getLecturasPC3 = getLecturasPC1;
+
 export const getPCData = async (pcId: string) => {
     const data = await getResultadosCompletos();
     return data.protocolos_anidado || [];
