@@ -1,175 +1,161 @@
-const fetchLocalJson = async (filename: string) => {
-    const response = await fetch(`/resultados/${filename}`);
+const API_BASE = import.meta.env.VITE_API_BASE;
+
+const fetchData = async (endpoint: string) => {
+    const response = await fetch(`${API_BASE}${endpoint}`);
     if (!response.ok) {
-        throw new Error(`Error al cargar ${filename}: ${response.status}`);
+        throw new Error(`Error al cargar ${endpoint}: ${response.status}`);
     }
     return response.json();
 };
 
-export const getResultadosCompletos = async () => {
-    return fetchLocalJson('resultados_completos.json');
+export const getGeneralProtocolos = async () => {
+    return fetchData('/json/general_protocolos.json');
 };
 
-export const getDistribucionProtocolos = async () => {
-    const data = await getResultadosCompletos();
-    return data.distribucion_protocolos;
+export const getLecturasGeneral = async () => {
+    return fetchData('/json/lecturas_general.json');
 };
 
-export const getVariacionHora = async () => {
-    const data = await getResultadosCompletos();
-    return data.variacion_por_hora || [];
+export const getLecturasHoras = async () => {
+    return fetchData('/json/lecturas_horas.json');
 };
-
-export const getVariacionDia = async () => {
-    const data = await getResultadosCompletos();
-    return data.variacion_por_dia || [];
-};
-
-export const getICMP = async () => {
-    const data = await getResultadosCompletos();
-    return data.icmp;
-};
-
-export const getDNS = async () => {
-    const data = await getResultadosCompletos();
-    return data.dns;
-};
-
-export const getFTP = async () => {
-    const data = await getResultadosCompletos();
-    return data.ftp;
-};
-
-export const getSMTP = async () => {
-    const data = await getResultadosCompletos();
-    return data.smtp;
-};
-
-export const getUDP = async () => {
-    const data = await getResultadosCompletos();
-    return data.udp;
-};
-
-export const getTCP = async () => {
-    const data = await getResultadosCompletos();
-    return data.tcp;
-};
-
-export const getHTTP = async () => {
-    const data = await getResultadosCompletos();
-    return data.http;
-};
-
-export const getHTTPS = async () => {
-    const data = await getResultadosCompletos();
-    return data.https;
-};
-
-export const getVOIP = async () => {
-    const data = await getResultadosCompletos();
-    return data.voip || {};
-};
-
-export const getArchivos = async () => {
-    return {
-        files: ['resultados_completos.json']
-    };
-};
-
-export const getGeneralProtocolos = getDistribucionProtocolos;
-export const getLecturasGeneral = getVariacionHora;
-export const getLecturasHoras = getVariacionDia;
 
 export const getLecturasPC1 = async () => {
-    const data = await getResultadosCompletos();
-    return data.por_dia_protocolo_pc || [];
+    return fetchData('/json/lecturas_pc1.json');
 };
 
-export const getLecturasPC2 = getLecturasPC1;
-export const getLecturasPC3 = getLecturasPC1;
+export const getLecturasPC2 = async () => {
+    return fetchData('/json/lecturas_pc2.json');
+};
+
+export const getLecturasPC3 = async () => {
+    return fetchData('/json/lecturas_pc3.json');
+};
 
 export const getPCData = async (pcId: string) => {
-    const data = await getResultadosCompletos();
-    return data.protocolos_anidado || [];
+    return fetchData(`/json/pc_${pcId}.json`);
 };
 
-// ============================================================
-// FUNCIONES PARA PROTOCOLOS (getProtocoloDetalle)
-// ============================================================
+export const getGeneralDns = async () => {
+    return fetchData('/json/general_dns.json');
+};
+
+export const getGeneralFtp = async () => {
+    return fetchData('/json/general_ftp.json');
+};
+
+export const getGeneralVoip = async () => {
+    return fetchData('/json/general_voip.json');
+};
 
 export const getProtocoloDetalle = async (protocolo: string) => {
-    const data = await getResultadosCompletos();
-    const encontrado = data.distribucion_protocolos?.find(
-        (p: any) => p.protocolo === protocolo
-    );
-    return encontrado || { protocolo, cantidad: 0, porcentaje: 0 };
+    return fetchData(`/json/protocolo_${protocolo}.json`);
 };
 
-// ============================================================
-// FUNCIONES PARA METRICAS POR PC (PARA protocolosService.ts)
-// ============================================================
-
 export const getPc1DnsMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.dns || {};
+    return fetchData('/json/pc1_dns.json');
 };
 
 export const getPc1FtpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.ftp || {};
+    return fetchData('/json/pc1_ftp.json');
 };
 
 export const getPc1HttpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.http || {};
+    return fetchData('/json/pc1_http.json');
 };
 
 export const getPc1HttpsMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.https || {};
+    return fetchData('/json/pc1_https.json');
 };
 
 export const getPc1IcmpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.icmp || {};
+    return fetchData('/json/pc1_icmp.json');
 };
 
 export const getPc1SmtpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.smtp || {};
+    return fetchData('/json/pc1_smtp.json');
 };
 
 export const getPc1TcpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.tcp || {};
+    return fetchData('/json/pc1_tcp.json');
 };
 
 export const getPc1UdpMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.udp || {};
+    return fetchData('/json/pc1_udp.json');
 };
 
 export const getPc1VoipMetricas = async () => {
-    const data = await getResultadosCompletos();
-    return data.voip || {};
+    return fetchData('/json/pc1_voip.json');
 };
 
-export const getPc2DnsMetricas = getPc1DnsMetricas;
-export const getPc2FtpMetricas = getPc1FtpMetricas;
-export const getPc2HttpMetricas = getPc1HttpMetricas;
-export const getPc2HttpsMetricas = getPc1HttpsMetricas;
-export const getPc2IcmpMetricas = getPc1IcmpMetricas;
-export const getPc2SmtpMetricas = getPc1SmtpMetricas;
-export const getPc2TcpMetricas = getPc1TcpMetricas;
-export const getPc2UdpMetricas = getPc1UdpMetricas;
-export const getPc2VoipMetricas = getPc1VoipMetricas;
+export const getPc2DnsMetricas = async () => {
+    return fetchData('/json/pc2_dns.json');
+};
 
-export const getPc3DnsMetricas = getPc1DnsMetricas;
-export const getPc3FtpMetricas = getPc1FtpMetricas;
-export const getPc3HttpMetricas = getPc1HttpMetricas;
-export const getPc3HttpsMetricas = getPc1HttpsMetricas;
-export const getPc3IcmpMetricas = getPc1IcmpMetricas;
-export const getPc3SmtpMetricas = getPc1SmtpMetricas;
-export const getPc3TcpMetricas = getPc1TcpMetricas;
-export const getPc3UdpMetricas = getPc1UdpMetricas;
-export const getPc3VoipMetricas = getPc1VoipMetricas;
+export const getPc2FtpMetricas = async () => {
+    return fetchData('/json/pc2_ftp.json');
+};
+
+export const getPc2HttpMetricas = async () => {
+    return fetchData('/json/pc2_http.json');
+};
+
+export const getPc2HttpsMetricas = async () => {
+    return fetchData('/json/pc2_https.json');
+};
+
+export const getPc2IcmpMetricas = async () => {
+    return fetchData('/json/pc2_icmp.json');
+};
+
+export const getPc2SmtpMetricas = async () => {
+    return fetchData('/json/pc2_smtp.json');
+};
+
+export const getPc2TcpMetricas = async () => {
+    return fetchData('/json/pc2_tcp.json');
+};
+
+export const getPc2UdpMetricas = async () => {
+    return fetchData('/json/pc2_udp.json');
+};
+
+export const getPc2VoipMetricas = async () => {
+    return fetchData('/json/pc2_voip.json');
+};
+
+export const getPc3DnsMetricas = async () => {
+    return fetchData('/json/pc3_dns.json');
+};
+
+export const getPc3FtpMetricas = async () => {
+    return fetchData('/json/pc3_ftp.json');
+};
+
+export const getPc3HttpMetricas = async () => {
+    return fetchData('/json/pc3_http.json');
+};
+
+export const getPc3HttpsMetricas = async () => {
+    return fetchData('/json/pc3_https.json');
+};
+
+export const getPc3IcmpMetricas = async () => {
+    return fetchData('/json/pc3_icmp.json');
+};
+
+export const getPc3SmtpMetricas = async () => {
+    return fetchData('/json/pc3_smtp.json');
+};
+
+export const getPc3TcpMetricas = async () => {
+    return fetchData('/json/pc3_tcp.json');
+};
+
+export const getPc3UdpMetricas = async () => {
+    return fetchData('/json/pc3_udp.json');
+};
+
+export const getPc3VoipMetricas = async () => {
+    return fetchData('/json/pc3_voip.json');
+};
