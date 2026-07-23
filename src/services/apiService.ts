@@ -1,57 +1,97 @@
+// ============================================================
+// apiService.ts - LEE JSON LOCAL (resultados_completos.json)
+// ============================================================
 
-const RESULTADOS_PATH = '/resultados';  // Ruta de los JSON locales
-
-// Función genérica para leer archivos JSON locales
+// Función para leer archivos JSON locales
 const fetchLocalJson = async (filename: string) => {
-    try {
-        const response = await fetch(`${RESULTADOS_PATH}/${filename}`);
-        if (!response.ok) {
-            throw new Error(`Error HTTP ${response.status}: No se pudo cargar ${filename}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Error al cargar archivo local:', error);
-        throw error;
+    const response = await fetch(`/resultados/${filename}`);
+    if (!response.ok) {
+        throw new Error(`Error al cargar ${filename}: ${response.status}`);
     }
+    return response.json();
 };
 
-// ============================================================
-// FUNCIONES QUE USA TRAFFICVIS
-// ============================================================
-
+// Obtiene TODOS los datos del archivo completo
 export const getResultadosCompletos = async () => {
     return fetchLocalJson('resultados_completos.json');
 };
 
+// Funciones que extraen partes específicas del archivo completo
 export const getDistribucionProtocolos = async () => {
-    return fetchLocalJson('resultados_protocolos.json');
+    const data = await getResultadosCompletos();
+    return data.distribucion_protocolos;
 };
 
 export const getVariacionHora = async () => {
-    return fetchLocalJson('resultados_por_hora.json');
+    const data = await getResultadosCompletos();
+    return data.variacion_por_hora || [];
 };
 
 export const getVariacionDia = async () => {
-    return fetchLocalJson('resultados_por_dia.json');
+    const data = await getResultadosCompletos();
+    return data.variacion_por_dia || [];
 };
 
+export const getICMP = async () => {
+    const data = await getResultadosCompletos();
+    return data.icmp;
+};
+
+export const getDNS = async () => {
+    const data = await getResultadosCompletos();
+    return data.dns;
+};
+
+export const getFTP = async () => {
+    const data = await getResultadosCompletos();
+    return data.ftp;
+};
+
+export const getSMTP = async () => {
+    const data = await getResultadosCompletos();
+    return data.smtp;
+};
+
+export const getUDP = async () => {
+    const data = await getResultadosCompletos();
+    return data.udp;
+};
+
+export const getTCP = async () => {
+    const data = await getResultadosCompletos();
+    return data.tcp;
+};
+
+export const getHTTP = async () => {
+    const data = await getResultadosCompletos();
+    return data.http;
+};
+
+export const getHTTPS = async () => {
+    const data = await getResultadosCompletos();
+    return data.https;
+};
+
+// Lista de archivos disponibles
 export const getArchivos = async () => {
-    // Como ya no tenemos Azure, devolvemos una lista de archivos disponibles
     return {
         files: [
-            'resultados_completos.json',
-            'resultados_protocolos.json',
-            'resultados_por_hora.json',
-            'resultados_por_dia.json'
+            'resultados_completos.json'
         ]
     };
 };
 
-// Mantén las funciones que ya tenías pero redirígelas a archivos locales
+// Mantén compatibilidad con funciones existentes
 export const getGeneralProtocolos = getDistribucionProtocolos;
 export const getLecturasGeneral = getVariacionHora;
 export const getLecturasHoras = getVariacionDia;
+export const getLecturasPC1 = async () => {
+    const data = await getResultadosCompletos();
+    return data.por_dia_protocolo_pc || [];
+};
+export const getLecturasPC2 = getLecturasPC1;
+export const getLecturasPC3 = getLecturasPC1;
 export const getPCData = async (pcId: string) => {
-    // Si tienes datos por PC, puedes cargar un archivo específico
-    return fetchLocalJson(`resultados_por_pc_${pcId}.json`);
+    const data = await getResultadosCompletos();
+    return data.protocolos_anidado || [];
 };
