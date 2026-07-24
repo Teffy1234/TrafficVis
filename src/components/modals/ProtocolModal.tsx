@@ -183,7 +183,6 @@ export default function ProtocolModal({ protocol, onClose, selectedPC }: Protoco
     <span className="text-sm font-bold text-slate-900">{(cant as number)?.toLocaleString('es-ES') || '0'}</span>
   </div>
 ))}
-            ))}
           </div>
         );
 
