@@ -13,4 +13,18 @@ export default defineConfig({
   server: {
     hmr: true,
   },
+  // ============================================================
+  // 🔧 CONFIGURACIÓN DE BUILD PARA PRODUCCIÓN
+  // ============================================================
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  base: '/',
 });
