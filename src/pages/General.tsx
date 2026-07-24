@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ProtocolCard from '../components/dashboard/ProtocolCard';
 import ProtocolChart from '../components/charts/ProtocolChart';
-import { getProtocolos } from '../services/protocolosService';
+import { getDistribucionProtocolos } from '../services/apiService';
 import { ProtocolData } from '../types';
 
 interface GeneralProps {
@@ -26,8 +26,9 @@ export default function General({ onProtocolClick }: GeneralProps) {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const data = await getProtocolos();
-        setProtocolos(data);
+        const data = await getDistribucionProtocolos();
+        console.log('📊 Datos cargados en General:', data);
+        setProtocolos(data || []);
       } catch (error) {
         console.error("Error fetching protocols:", error);
       } finally {
