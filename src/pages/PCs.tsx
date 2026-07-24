@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Activity, ChevronDown, ChevronUp, Filter, Search, X } from 'lucide-react';
-import ProtocolCard from '../components/dashboard/ProtocolCard';
-import { getPCData } from '../services/pcsService';
-import { ProtocolData } from '../types';
+import ProtocolCard from '../dashboard/ProtocolCard';
+import { getPCData } from '../../services/pcsService';
+import { ProtocolData } from '../../types';
 
-interface PCsPageProps {
+interface PCsSectionProps {
   selectedPC: string;
   onPCChange: (pc: string) => void;
   onProtocolClick: (protocol: ProtocolData) => void;
 }
 
-export default function PCsPage({ selectedPC, onPCChange, onProtocolClick }: PCsPageProps) {
+export default function PCsSection({ selectedPC, onPCChange, onProtocolClick }: PCsSectionProps) {
   const [protocolos, setProtocolos] = useState<ProtocolData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
