@@ -27,7 +27,7 @@ export default function General({ onProtocolClick }: GeneralProps) {
       setIsLoading(true);
       try {
         const data = await getDistribucionProtocolos();
-        console.log('📊 Datos cargados en General:', data);
+        console.log('📊 Datos obtenidos de la API:', data);
         setProtocolos(data || []);
       } catch (error) {
         console.error("Error fetching protocols:", error);
@@ -40,13 +40,15 @@ export default function General({ onProtocolClick }: GeneralProps) {
 
   const topProtocols = useMemo(() => {
     return [...protocolos]
-      .sort((a, b) => b.total - a.total)
+      .sort((a, b) => (b.total || 0) - (a.total || 0))
       .slice(0, 4);
   }, [protocolos]);
 
   const orderedProtocols = useMemo(() => {
-    return [...protocolos].sort((a, b) => b.total - a.total);
+    return [...protocolos].sort((a, b) => (b.total || 0) - (a.total || 0));
   }, [protocolos]);
+
+  console.log('📊 orderedProtocols (antes de renderizar):', orderedProtocols);
 
   if (isLoading) {
     return (
