@@ -30,7 +30,7 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
         <div className="bg-white p-4 border border-slate-200 shadow-xl rounded-xl">
           <p className="font-bold text-slate-900">{protocol.protocolo}</p>
           <p className="text-sm text-slate-500">
-            Cantidad: <span className="font-semibold text-slate-700">{protocol.total.toLocaleString('es-ES')}</span>
+           Cantidad: <span className="font-semibold text-slate-700">{protocol.total?.toLocaleString('es-ES') || '0'}</span>
           </p>
           <p className="text-sm text-slate-500">
             Porcentaje: <span className="font-semibold text-slate-700">{protocol.porcentaje_global}%</span>

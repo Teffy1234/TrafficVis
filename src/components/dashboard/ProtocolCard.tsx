@@ -25,8 +25,8 @@ const ProtocolCard: React.FC<ProtocolCardProps> = ({ protocol, onClick }) => {
             {protocol.protocolo}
           </h3>
           <p className="text-xl font-black text-slate-900 leading-tight">
-            {protocol.total.toLocaleString('es-ES')}
-          </p>
+  {protocol.total?.toLocaleString('es-ES') || '0'}
+</p>
         </div>
         <div 
           className="px-2 py-0.5 rounded-md text-[10px] font-black"

@@ -171,16 +171,14 @@ export default function IndividualSection() {
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-semibold bg-blue-100 text-blue-700">
-                      {item.value.toLocaleString()}
-                    </span>
+                    <span className="text-xs font-medium text-slate-600">{val?.toLocaleString() || '0'}</span>
                   </td>
                   <td className="px-6 py-4">
                     <div className="flex flex-wrap gap-2">
                       {Object.entries(item.metrics).map(([proto, val]: [string, any]) => (
                         <div key={proto} className="flex flex-col">
                           <span className="text-[10px] font-bold text-slate-400 uppercase">{proto}</span>
-                          <span className="text-xs font-medium text-slate-600">{val.toLocaleString()}</span>
+                          <span className="text-xs font-medium text-slate-600">{val?.toLocaleString() || '0'}</span>
                         </div>
                       ))}
                     </div>

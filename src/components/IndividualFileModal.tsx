@@ -56,7 +56,7 @@ export default function IndividualFileModal({
       </div>
       <div>
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{label}</p>
-        <p className="text-lg font-bold text-slate-900">{typeof value === 'number' ? value.toLocaleString('es-ES') : value}</p>
+        <p className="text-lg font-bold text-slate-900">{typeof value === 'number' ? value.toLocaleString() : (value || '0')}</p>
       </div>
     </div>
   );
@@ -123,17 +123,23 @@ export default function IndividualFileModal({
               {renderMetric('P95 Latencia', `${details.latencia_p95_ms} ms`, <Shield className="w-5 h-5 text-blue-500" />)}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {renderList('Métodos HTTP', Object.entries(details.metodos_http || {}), ([metodo, cant], idx) => (
-                <div key={idx} className="bg-slate-50 p-3 rounded-xl flex items-center justify-between">
-                  <span className="text-sm font-bold text-slate-700">{metodo}</span>
-                  <span className="text-sm font-bold text-slate-900">{(cant as number).toLocaleString('es-ES')}</span>
-                </div>
-              ))}
-              {renderList('Códigos de Respuesta', Object.entries(details.codigos_respuesta || {}), ([codigo, cant], idx) => (
-                <div key={idx} className="bg-slate-50 p-3 rounded-xl flex items-center justify-between">
-                  <span className="text-sm font-bold text-slate-700">Status {codigo}</span>
-                  <span className="text-sm font-bold text-slate-900">{(cant as number).toLocaleString('es-ES')}</span>
-                </div>
+  {renderList('Métodos HTTP', Object.entries(details.metodos_http || {}), ([metodo, cant], idx) => (
+    <div key={idx} className="bg-slate-50 p-3 rounded-xl flex items-center justify-between">
+      <span className="text-sm font-bold text-slate-700">{metodo}</span>
+      <span className="text-sm font-bold text-slate-900">
+        {(cant as number)?.toLocaleString('es-ES') || '0'}
+      </span>
+    </div>
+  ))}
+  {renderList('Códigos de Respuesta', Object.entries(details.codigos_respuesta || {}), ([codigo, cant], idx) => (
+    <div key={idx} className="bg-slate-50 p-3 rounded-xl flex items-center justify-between">
+      <span className="text-sm font-bold text-slate-700">Status {codigo}</span>
+      <span className="text-sm font-bold text-slate-900">
+        {(cant as number)?.toLocaleString('es-ES') || '0'}
+      </span>
+    </div>
+  ))}
+</div>
               ))}
             </div>
           </div>
