@@ -83,7 +83,10 @@ export default function General({ onProtocolClick }: GeneralProps) {
         </div>
       </section>
 
-      {/* Chart Section */}
+      {/* ============================================================
+          🛠️ GRÁFICO COMENTADO TEMPORALMENTE PARA EVITAR ERROR DE ALTURA
+          ============================================================ */}
+      {/*
       {!isTinyScreen && (
         <section className="lg:flex-[0.65] min-h-[400px] lg:min-h-0">
           <ProtocolChart 
@@ -92,6 +95,7 @@ export default function General({ onProtocolClick }: GeneralProps) {
           />
         </section>
       )}
+      */}
 
       {/* Footer */}
       <footer className="shrink-0 pt-4 border-t border-slate-200 text-center text-slate-400 text-[10px] uppercase tracking-widest">
