@@ -1,14 +1,15 @@
-import { 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
-  Tooltip, 
-  ResponsiveContainer, 
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
   Cell,
-  LabelList
+  LabelList,
 } from 'recharts';
+
 import { ProtocolData } from '../../types';
 
 interface ProtocolChartProps {
@@ -16,21 +17,11 @@ interface ProtocolChartProps {
   onBarClick?: (protocol: ProtocolData) => void;
 }
 
-const COLOR_MAP: Record<string, string> = {
-  'UDP': '#f97316',
-  'ICMP': '#ef4444',
-  'TCP': '#8b5cf6',
-  'DNS': '#3b82f6',
-  'FTP': '#10b981',
-  'SMTP': '#14b8a6',
-  'HTTP': '#f59e0b',
-  'HTTPS': '#6366f1',
-  'DEFAULT': '#0f172a'
-};
-
 export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) {
+  // Asegura que data sea un array
   const chartData = Array.isArray(data) ? data : [];
 
+  // Si no hay datos, muestra un mensaje
   if (chartData.length === 0) {
     return (
       <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-center" style={{ height: 400 }}>
@@ -52,10 +43,16 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
         <div className="bg-white p-4 border border-slate-200 shadow-xl rounded-xl">
           <p className="font-bold text-slate-900">{protocol.protocolo}</p>
           <p className="text-sm text-slate-500">
-            Cantidad: <span className="font-semibold text-slate-700">{protocol.total?.toLocaleString('es-ES') || '0'}</span>
+            Cantidad:{' '}
+            <span className="font-semibold text-slate-700">
+              {protocol.total?.toLocaleString('es-ES') || '0'}
+            </span>
           </p>
           <p className="text-sm text-slate-500">
-            Porcentaje: <span className="font-semibold text-slate-700">{protocol.porcentaje_global || 0}%</span>
+            Porcentaje:{' '}
+            <span className="font-semibold text-slate-700">
+              {protocol.porcentaje_global || 0}%
+            </span>
           </p>
         </div>
       );
@@ -69,8 +66,8 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
         <h2 className="text-lg font-bold text-slate-900">Distribución de Protocolos</h2>
         <p className="text-xs text-slate-500">Comparativa de tráfico por tipo de protocolo</p>
       </div>
-      
-      {/* 🔧 CAMBIO CLAVE: altura fija de 400px */}
+
+      {/* 🔧 AQUÍ ESTÁ EL CAMBIO MÁS IMPORTANTE */}
       <div style={{ width: '100%', height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -85,27 +82,29 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
             style={onBarClick ? { cursor: 'pointer' } : {}}
           >
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-            <XAxis 
-              dataKey="protocolo" 
-              axisLine={false} 
-              tickLine={false} 
+            <XAxis
+              dataKey="protocolo"
+              axisLine={false}
+              tickLine={false}
               tick={{ fill: '#64748b', fontSize: 11, fontWeight: 500 }}
               dy={10}
             />
-            <YAxis 
-              axisLine={false} 
-              tickLine={false} 
+            <YAxis
+              axisLine={false}
+              tickLine={false}
               tick={{ fill: '#64748b', fontSize: 11 }}
               tickFormatter={formatYAxis}
             />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(148, 163, 184, 0.1)', radius: 8 }} />
             <Bar dataKey="total" radius={[6, 6, 0, 0]} barSize={50} isAnimationActive={true}>
-              {chartData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.color || COLOR_MAP[entry.protocolo] || COLOR_MAP.DEFAULT} />
-              ))}
-              <LabelList 
-                dataKey="porcentaje_global" 
-                position="top" 
+              {chartData.map((entry, index) => {
+                // Asigna un color por defecto si no existe
+                const colors = ['#f97316', '#ef4444', '#8b5cf6', '#3b82f6', '#10b981', '#14b8a6', '#f59e0b', '#6366f1'];
+                return <Cell key={`cell-${index}`} fill={entry.color || colors[index % colors.length]} />;
+              })}
+              <LabelList
+                dataKey="porcentaje_global"
+                position="top"
                 formatter={(val: number) => `${val}%`}
                 style={{ fill: '#64748b', fontSize: 10, fontWeight: 600 }}
                 offset={10}
