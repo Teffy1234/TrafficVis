@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import ProtocolCard from '../components/dashboard/ProtocolCard';
-import ProtocolChart from '../components/charts/ProtocolChart';
 import { getDistribucionProtocolos } from '../services/apiService';
 import { ProtocolData } from '../types';
 
@@ -65,7 +64,6 @@ export default function General({ onProtocolClick }: GeneralProps) {
         <p className="text-slate-500 text-sm md:text-base mt-1">Resumen global del tráfico de red y protocolos detectados.</p>
       </header>
 
-      {/* Top Cards Section */}
       <section className="shrink-0 lg:flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-4 shrink-0">
           <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
@@ -83,21 +81,6 @@ export default function General({ onProtocolClick }: GeneralProps) {
         </div>
       </section>
 
-      {/* ============================================================
-          🛠️ GRÁFICO COMENTADO TEMPORALMENTE PARA EVITAR ERROR DE ALTURA
-          ============================================================ */}
-      {/*
-      {!isTinyScreen && (
-        <section className="lg:flex-[0.65] min-h-[400px] lg:min-h-0">
-          <ProtocolChart 
-            data={orderedProtocols} 
-            onBarClick={onProtocolClick}
-          />
-        </section>
-      )}
-      */}
-
-      {/* Footer */}
       <footer className="shrink-0 pt-4 border-t border-slate-200 text-center text-slate-400 text-[10px] uppercase tracking-widest">
         <p>© 2026 TrafficVis - Sistema de Monitoreo de Red Profesional</p>
       </footer>
