@@ -10,8 +10,6 @@ import { onAuthStateChanged, signOut, User } from 'firebase/auth';
 import { auth } from './firebase';
 import Sidebar from './components/Sidebar';
 import ProtocolCard from './components/dashboard/ProtocolCard';
-/**import ProtocolChart from './components/charts/ProtocolChart';
-*/
 import ProtocolModal from './components/modals/ProtocolModal';
 import LecturasSection from './components/panels/LecturasSection';
 import PCsSection from './components/panels/PCsSection';
@@ -63,14 +61,12 @@ export default function App() {
 
   const isTinyScreen = windowWidth < 400;
 
-  // Get top 4 protocols for cards based on 'total' property
   const topProtocols = useMemo(() => {
     return [...protocolos]
       .sort((a, b) => b.total - a.total)
       .slice(0, 4);
   }, [protocolos]);
 
-  // All protocols ordered for the chart
   const orderedProtocols = useMemo(() => {
     return [...protocolos].sort((a, b) => b.total - a.total);
   }, [protocolos]);
@@ -159,7 +155,8 @@ export default function App() {
               </div>
             </section>
 
-            {/* Chart Section */}
+            {/* Chart Section - ELIMINADO TEMPORALMENTE */}
+            {/* 
             {!isTinyScreen && (
               <section className="lg:flex-[0.65] min-h-[400px] lg:min-h-0">
                 <ProtocolChart 
@@ -168,6 +165,7 @@ export default function App() {
                 />
               </section>
             )}
+            */}
 
             {/* Footer */}
             <footer className="shrink-0 pt-4 border-t border-slate-200 text-center text-slate-400 text-[10px] uppercase tracking-widest">
