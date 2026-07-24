@@ -16,16 +16,16 @@
   "icmp": {
     "disponible": true,
     "total_pings": 214238,
-    "rtt_promedio": 23.45,
-    "rtt_min": 12.10,
-    "rtt_max": 87.30,
-    "rtt_p95": 45.67
+    "rtt_promedio_ms": 23.45,
+    "rtt_min_ms": 12.10,
+    "rtt_max_ms": 87.30,
+    "rtt_p95_ms": 45.67
   },
   "dns": {
     "disponible": true,
     "total_paquetes": 50122,
-    "total_consultas": 38136,
-    "total_respuestas": 0
+    "consultas": 38136,
+    "respuestas": 0
   },
   "ftp": {
     "disponible": true,
@@ -45,7 +45,7 @@
     "disponible": true,
     "total_paquetes": 2411868,
     "total_bytes": 634161582,
-    "tamanio_promedio": 262.93,
+    "tamanio_paquete_promedio": 262.93,
     "top_puertos_destino": {"53": 482373, "123": 301483, "161": 241186},
     "top_ips_origen": {"192.168.1.60": 803956}
   },
@@ -53,7 +53,7 @@
     "disponible": true,
     "total_paquetes": 162818,
     "total_bytes": 15998081,
-    "tamanio_promedio": 98.26,
+    "tamanio_paquete_promedio": 98.26,
     "top_puertos_destino": {"443": 32563, "80": 20352, "21": 16281},
     "top_ips_origen": {"192.168.1.60": 54272}
   },
