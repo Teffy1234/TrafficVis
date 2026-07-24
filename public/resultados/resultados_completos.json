@@ -19,27 +19,33 @@
     "rtt_promedio_ms": 23.45,
     "rtt_min_ms": 12.10,
     "rtt_max_ms": 87.30,
-    "rtt_p95_ms": 45.67
+    "rtt_p95_ms": 45.67,
+    "perdida_paquetes": 0,
+    "jitter_ms": 2.5
   },
   "dns": {
     "disponible": true,
     "total_paquetes": 50122,
     "consultas": 38136,
-    "respuestas": 0
+    "respuestas": 0,
+    "top_dominios": ["bing.com", "whatsapp.com", "microsoft.com"],
+    "tipos_consulta": {"A": 30000, "AAAA": 5000, "MX": 3000}
   },
   "ftp": {
     "disponible": true,
     "total_paquetes": 27309,
     "total_bytes": 2021286,
     "comandos": {"USER": 9103, "PASS": 9103, "QUIT": 9103},
-    "respuestas": {"220": 6827, "331": 9103, "530": 9103}
+    "respuestas": {"220": 6827, "331": 9103, "530": 9103},
+    "transferencias": {"descargas": 100, "subidas": 50}
   },
   "smtp": {
     "disponible": true,
     "total_paquetes": 11097,
     "total_bytes": 835861,
     "comandos": {"EHLO": 5548, "QUIT": 5548},
-    "respuestas": {"220": 2774, "250": 2774}
+    "respuestas": {"220": 2774, "250": 2774},
+    "envio_correos": {"total_mensajes": 100}
   },
   "udp": {
     "disponible": true,
@@ -55,13 +61,15 @@
     "total_bytes": 15998081,
     "tamanio_paquete_promedio": 98.26,
     "top_puertos_destino": {"443": 32563, "80": 20352, "21": 16281},
-    "top_ips_origen": {"192.168.1.60": 54272}
+    "top_ips_origen": {"192.168.1.60": 54272},
+    "retransmisiones": {"total": 500}
   },
   "http": {
     "disponible": true,
     "total_paquetes": 10398,
     "metodos": {"GET": 5199, "POST": 1039},
-    "codigos_respuesta": {"200": 5199, "404": 1039}
+    "codigos_respuesta": {"200": 5199, "404": 1039},
+    "top_hosts": {"www.bing.com": 2000, "www.google.com": 1500}
   },
   "https": {
     "disponible": true,
