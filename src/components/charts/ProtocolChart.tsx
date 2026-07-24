@@ -16,7 +16,6 @@ interface ProtocolChartProps {
   onBarClick?: (protocol: ProtocolData) => void;
 }
 
-// Colores predefinidos por protocolo
 const COLOR_MAP: Record<string, string> = {
   'UDP': '#f97316',
   'ICMP': '#ef4444',
@@ -30,20 +29,12 @@ const COLOR_MAP: Record<string, string> = {
 };
 
 export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) {
-  // Verifica que data sea un array válido
   const chartData = Array.isArray(data) ? data : [];
-  
-  console.log('📊 ProtocolChart - Datos recibidos:', chartData);
-  console.log('📊 ProtocolChart - Cantidad de datos:', chartData.length);
 
-  // Si no hay datos, muestra un mensaje
   if (chartData.length === 0) {
     return (
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-[400px] flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-slate-500 font-medium">No hay datos disponibles</p>
-          <p className="text-xs text-slate-400 mt-1">Carga los datos desde el panel de control</p>
-        </div>
+      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-center" style={{ height: 400 }}>
+        <p className="text-slate-500">No hay datos disponibles</p>
       </div>
     );
   }
@@ -73,13 +64,14 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
   };
 
   return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-full flex flex-col overflow-hidden">
-      <div className="mb-4 shrink-0">
+    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+      <div className="mb-4">
         <h2 className="text-lg font-bold text-slate-900">Distribución de Protocolos</h2>
         <p className="text-xs text-slate-500">Comparativa de tráfico por tipo de protocolo</p>
       </div>
       
-      <div className="flex-1 min-h-0" style={{ minHeight: '400px' }}>
+      {/* 🔧 CAMBIO IMPORTANTE: altura fija de 400px */}
+      <div style={{ width: '100%', height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
@@ -88,8 +80,6 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
               if (!onBarClick) return;
               if (state && state.activePayload && state.activePayload.length > 0) {
                 onBarClick(state.activePayload[0].payload);
-              } else if (state && state.activeTooltipIndex !== undefined && state.activeTooltipIndex !== -1) {
-                onBarClick(data[state.activeTooltipIndex]);
               }
             }}
             style={onBarClick ? { cursor: 'pointer' } : {}}
@@ -108,21 +98,10 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
               tick={{ fill: '#64748b', fontSize: 11 }}
               tickFormatter={formatYAxis}
             />
-            <Tooltip 
-              content={<CustomTooltip />} 
-              cursor={{ fill: 'rgba(148, 163, 184, 0.1)', radius: 8 }} 
-            />
-            <Bar 
-              dataKey="total" 
-              radius={[6, 6, 0, 0]} 
-              barSize={50}
-              isAnimationActive={true}
-            >
+            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(148, 163, 184, 0.1)', radius: 8 }} />
+            <Bar dataKey="total" radius={[6, 6, 0, 0]} barSize={50} isAnimationActive={true}>
               {chartData.map((entry, index) => (
-                <Cell 
-                  key={`cell-${index}`} 
-                  fill={entry.color || COLOR_MAP[entry.protocolo] || COLOR_MAP.DEFAULT} 
-                />
+                <Cell key={`cell-${index}`} fill={entry.color || COLOR_MAP[entry.protocolo] || COLOR_MAP.DEFAULT} />
               ))}
               <LabelList 
                 dataKey="porcentaje_global" 
