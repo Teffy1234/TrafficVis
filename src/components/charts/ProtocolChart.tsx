@@ -70,7 +70,7 @@ export default function ProtocolChart({ data, onBarClick }: ProtocolChartProps) 
         <p className="text-xs text-slate-500">Comparativa de tráfico por tipo de protocolo</p>
       </div>
       
-      {/* 🔧 CAMBIO IMPORTANTE: altura fija de 400px */}
+      {/* 🔧 CAMBIO CLAVE: altura fija de 400px */}
       <div style={{ width: '100%', height: 400 }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
