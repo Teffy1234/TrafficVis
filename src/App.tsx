@@ -10,7 +10,8 @@ import { onAuthStateChanged, signOut, User } from 'firebase/auth';
 import { auth } from './firebase';
 import Sidebar from './components/Sidebar';
 import ProtocolCard from './components/dashboard/ProtocolCard';
-import ProtocolChart from './components/charts/ProtocolChart';
+/**import ProtocolChart from './components/charts/ProtocolChart';
+*/
 import ProtocolModal from './components/modals/ProtocolModal';
 import LecturasSection from './components/panels/LecturasSection';
 import PCsSection from './components/panels/PCsSection';
